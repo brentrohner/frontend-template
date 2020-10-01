@@ -1,0 +1,35 @@
+import { {{camelCase actionName}} } from 'src/redux/actions/{{camelCase stateName}}';
+import {{camelCase stateName}}Reducer, { State } from './{{camelCase stateName}}';
+
+describe('reducers/{{camelCase stateName}}', () => {
+  const empty = (): State => ({});
+
+  describe('{{camelCase actionName}}', () => {
+    const { pending, success, failure } = {{camelCase actionName}}.actions({});
+    const response = undefined;
+
+    describe('when the state is empty', () => {
+      it('returns the same state reference on pending', () => {
+        const state = empty();
+        const reduced = {{camelCase stateName}}Reducer(state, pending);
+        expect(reduced).toBe(state);
+        expect(reduced).toEqual(empty());
+      });
+
+      // TODO: Probably want to update this
+      it('returns the same state reference on success', () => {
+        const state = empty();
+        const reduced = {{camelCase stateName}}Reducer(state, success(response));
+        expect(reduced).toBe(state);
+        expect(reduced).toEqual(empty());
+      });
+
+      it('returns the same state reference on failure', () => {
+        const state = empty();
+        const reduced = {{camelCase stateName}}Reducer(state, failure(new Error()));
+        expect(reduced).toBe(state);
+        expect(reduced).toEqual(empty());
+      });
+    });
+  });
+});

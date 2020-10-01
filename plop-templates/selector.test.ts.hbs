@@ -1,0 +1,10 @@
+import { get{{pascalCase stateName}} } from './{{camelCase stateName}}';
+
+describe('selectors/{{camelCase stateName}}', () => {
+  describe('get{{pascalCase stateName}}', () => {
+    it('returns the state', () => {
+      const store = { {{camelCase stateName}}: {} };
+      expect(get{{pascalCase stateName}}(store)).toEqual(store.{{camelCase stateName}});
+    });
+  });
+});

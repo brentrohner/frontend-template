@@ -1,0 +1,27 @@
+import { Reducer } from 'redux';
+import * as {{camelCase stateName}} from 'src/redux/actions/{{camelCase stateName}}';
+
+/** Redux {{camelCase stateName}} state. */
+export interface State {
+  // TODO: Add fields
+}
+
+const initialState: State = {};
+
+/**
+ * Reducer for the {{camelCase stateName}} state.
+ * @param state Current {{camelCase stateName}} state.
+ * @param action Redux action.
+ * @returns New {{camelCase stateName}} state.
+ */
+const {{camelCase stateName}}Reducer: Reducer<State, {{camelCase stateName}}.Actions> = (
+  state = initialState,
+  action
+) => {
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
+
+export default {{camelCase stateName}}Reducer;

@@ -1,0 +1,13 @@
+import { text, withKnobs } from '@storybook/addon-knobs';
+import React from 'react';
+import {{pascalCase name}} from '.';
+
+export default {
+  title: '{{pascalCase name}}',
+  component: {{pascalCase name}},
+  decorators: [withKnobs],
+};
+
+export const Default = (): JSX.Element => (
+  <{{pascalCase name}} className={text('className', '')} />
+);

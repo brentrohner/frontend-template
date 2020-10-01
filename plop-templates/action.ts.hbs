@@ -1,0 +1,16 @@
+import { createActionsBuilder, ExtractActions } from './utils/request';
+
+type {{pascalCase actionName}}Meta = {};
+type {{pascalCase actionName}}Response = void;
+
+export const {{camelCase actionName}} = createActionsBuilder<
+  {{pascalCase actionName}}Meta,
+  {{pascalCase actionName}}Response
+>()(
+  '{{constantCase actionName}}_PENDING',
+  '{{constantCase actionName}}_SUCCESS',
+  '{{constantCase actionName}}_FAILURE'
+);
+export type {{pascalCase actionName}}Actions = ExtractActions<typeof {{camelCase actionName}}>;
+
+export type Actions = {{pascalCase actionName}}Actions;

@@ -43,8 +43,11 @@ export type Href<P extends Params | void> = P extends void
     };
 
 const hrefs = {
-  template(): string {
-    return '/template';
+  home(): string {
+    return '/';
+  },
+  signUp(): string {
+    return '/sign-up';
   },
 };
 

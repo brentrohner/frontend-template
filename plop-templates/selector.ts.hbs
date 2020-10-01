@@ -1,0 +1,11 @@
+import { RootState } from 'src/redux/reducers';
+
+/**
+ * Only consume the parts of the store that we need.
+ */
+type State = Pick<RootState, '{{camelCase stateName}}'>;
+
+/**
+ * TODO: Add docstring
+ */
+export const get{{pascalCase stateName}} = (state: State): State => state;

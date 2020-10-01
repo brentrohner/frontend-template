@@ -1,6 +1,7 @@
 import React from 'react';
 import { Route, Switch, RouteComponentProps } from 'react-router-dom';
 import hrefs, { Href } from 'src/modules/href';
+import HomePage from './pages/HomePage';
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 type HrefProps<H extends Href<any>> = H extends () => string
@@ -42,7 +43,12 @@ const render = <H extends Href<any>>(
 export default function Routes(): JSX.Element {
   return (
     <>
-      <Switch></Switch>
+      <Switch>
+        <Route
+          path={hrefs.home()}
+          render={render<typeof hrefs.home>(HomePage)}
+        />
+      </Switch>
     </>
   );
 }
